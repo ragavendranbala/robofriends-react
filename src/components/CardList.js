@@ -3,7 +3,9 @@ import Card from "./Card";
 
 
 const cardList = ({robotsList}) => {
-
+    // if (true) {
+    //     throw new Error("ERROR BY RAGAV");
+    // }
     const cardsArray = robotsList.map((robot, index) => {
         return (
             <Card
