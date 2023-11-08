@@ -8,24 +8,12 @@ import "./App.css"
 
 // class App extends Component {
 function App() {
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //         robots: [],
-    //         searchFieldValue: ''
-    //     }
-    // }
+
 
     const [robots, setRobots] = useState([]);
     const [searchFieldValue, setSearchFieldValue] = useState('');
 
-    // componentDidMount() {
-    //     fetch('https://jsonplaceholder.typicode.com/users')
-    //         .then(response => response.json())
-    //         .then(users => {
-    //             this.setState({robots: users})
-    //         });
-    // }
+
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -34,11 +22,7 @@ function App() {
                 setRobots(users)
             });
     }, []);
-
-
-    // OnValueChanged = (event) => {
-    //     this.setState({searchFieldValue: event.target.value});
-    // }
+    
     const OnValueChanged = (event) => {
         setSearchFieldValue(event.target.value);
     }
